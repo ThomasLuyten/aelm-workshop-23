@@ -20,7 +20,7 @@ jobs:
 
     - name: Build Go application
       working-directory: workshop-service
-      run: go build -o main.go workshop.go
+      run: go build main.go workshop.go
 
     - name: Set up Docker
       uses: docker/setup-buildx-action@v1

@@ -16,12 +16,10 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
-        go-version: 1.17
-
-    - name: Set working directory
-      run: cd workshop-service
+        go-version: 1.21.4
 
     - name: Build Go application
+      working-directory: workshop-service
       run: go build -o main.go workshop.go
 
     - name: Set up Docker
